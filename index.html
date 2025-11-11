@@ -191,12 +191,70 @@
         background-color: var(--light-bg-color);
         box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.05); /* Converted from 0 2px 5px */
         }
-
-      .info-card h4 {
+          .info-card h4 {
         font-size: 1.2rem; /* Converted from 1.2em */
         color: var(--accent-color);
         margin-bottom: 0.3125rem; /* Converted from 5px */
         }
+    /* *TODO - experience, projects contact and footer */
+    /* Responsive styles for the web page */
+    /* apply the styles here if the screen is <= 600px(16px x37.5 rem) */
+    @media(max-width: 37.5rem){
+        /*  customize the section-padding */
+        .section-padding{
+            padding: 3.125rem 0.9375rem;
+        } 
+    /* wrap our navigation bar */
+        nav{
+        flex-wrap: wrap;
+        }
+        .about-grid{
+            flex-direction: column;
+        }
+        .about-image{
+            border: 2px solid black;
+            margin: 0 auto;
+        }
+        /* set the cta items in a single column  */
+        .cta-group{
+            display: flex;
+            flex-direction: column;
+            gap: 0.625rem;
+            border: 1px solid black;
+        }
+        /* change the link side the cta group */
+        /* descendent selector */
+        .cta-group a{
+            margin: 0;
+            width: 100%;
+        }
+
+        /* TODO - add media query for "contact-links a" */
+    }
+    /* set the about information into a single column */
+    /* apply the styles here if the screen iis <=900 px (16px x 56.25rem) */
+    @media(max-width: 56.25rem){
+        h2{
+            font-size: 2rem;
+        }
+
+        /* Change the about grid to a single column */
+        .about-grid{
+            flex-direction: column;
+        }
+        /* set portrait image to center of page */
+        .about-image{
+            margin: 0 auto;
+        }
+        .info-card-container{
+            flex-direction: column;
+        }
+        /* TODO - fix responsive layout for experiences-container*/
+        /* TOD - fix responsive layout for skills-list */
+        /* TODO - fix responive layout for project-grid */
+        /* TODO - fix responsive layout for project-card */
+    }
+    
     /* --- 3. EXPERIENCE SECTION --- */
       #experience {
         background-color: var(--light-bg-color);
